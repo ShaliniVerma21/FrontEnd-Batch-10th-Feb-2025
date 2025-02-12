@@ -1,0 +1,27 @@
+body{
+    background-color: aqua;
+    padding: 20px;
+}
+
+h1{
+    text-align: center;
+    text-decoration: underline;
+}
+
+h2{
+    text-decoration: underline;
+}
+
+h4{
+    text-decoration: underline;
+}
+
+img{
+    width: 400px;
+    height: 100%;
+
+    /*center image*/
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
