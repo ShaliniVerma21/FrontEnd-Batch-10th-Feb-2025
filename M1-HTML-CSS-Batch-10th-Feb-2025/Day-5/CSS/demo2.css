@@ -1,0 +1,146 @@
+/*CSS Comment (single line/multiline)*/
+
+body{
+    background-color: bisque;
+}
+
+.header{
+    background-color: #8a8383;
+    padding: 20px;
+}
+
+a{
+    margin: 20px;
+    text-decoration-line: none;
+}
+
+h1{
+    text-align: center;
+    text-decoration: underline;
+}
+
+.box1{
+    width: 100px;
+    height: 100px;
+    background-color: blueviolet;
+    display: inline-block;
+    margin: 5px;
+    border: 5px solid black;
+    border-radius: 50%;
+}
+
+.box2{
+    width: 100px;
+    height: 100px;
+    background-color:brown;
+    display: inline-block;
+    margin: 5px;
+    border: 5px solid black;
+    border-radius: 40%;
+}
+
+.box3{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(188, 144, 229);
+    display: inline-block;
+    margin: 5px;
+    border: 5px solid black;
+    border-radius: 30%;
+}
+
+.box4{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    display: inline-block;
+    margin: 5px;
+    border: 5px solid black;
+    border-radius: 20%;
+}
+
+.box5{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    display: inline-block;
+    margin: 5px;
+    border: 5px solid black;
+    border-radius: 10%;
+}
+
+.box6{
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    display: inline-block;
+    margin: 5px;
+    border: 5px solid black;
+    border-radius: 5%;
+}
+
+/*Images CSS*/
+#img1{
+    width: 200px;
+    height: 200px;
+    background-color: green;
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    border: 5px solid black;
+    border-radius: 20%;
+}
+
+#img2{
+    width: 200px;
+    height: 200px;
+    background-color: green;
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    border: 5px solid black;
+    border-radius: 20%;
+}
+
+#img3{
+    width: 200px;
+    height: 200px;
+    background-color: green;
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    border: 5px solid black;
+    border-radius: 20%;
+}
+
+#img4{
+    width: 200px;
+    height: 200px;
+    background-color: green;
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    border: 5px solid black;
+    border-radius: 20%;
+}
+
+#img5{
+    width: 200px;
+    height: 200px;
+    background-color: green;
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    border: 5px solid black;
+    border-radius: 20%;
+}
+
+.footer{
+    background-color: #8a8383;
+    padding: 20px;
+}
+
+.i1{
+    width: 50px;
+    height: 50px;
+}
