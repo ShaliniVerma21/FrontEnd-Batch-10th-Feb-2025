@@ -1,0 +1,46 @@
+/*Day-6 Session (CSS Magic Part-1)*/
+
+body{
+    background-color: rgb(173, 173, 230);
+    margin: 20px;
+}
+
+.box1{
+    background-color: rgb(255, 0, 0);
+    width:400px;
+    height:400px;
+    padding: 50px;
+}
+
+.box2{
+    background-color: white;
+    width:300px;
+    height:300px;
+    padding: 50px;
+}
+
+.box3{
+    background-color: green;
+    width:200px;
+    height:200px;
+    padding: 50px;
+}
+
+.box4{
+    background-color: yellow;
+    width:100px;
+    height:100px;
+    padding: 50px;
+}
+
+.box5{
+    background-color:#ff0000;
+    width:50px;
+    height:50px;
+    padding: 30px;
+}
+
+img{
+    width: 50px;
+    height: 50px;
+}
