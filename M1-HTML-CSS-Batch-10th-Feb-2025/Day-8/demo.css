@@ -1,0 +1,89 @@
+.box1{
+    height: 200px;
+    width: 200px;
+    border: 5px double black;
+    margin: 10px;
+    display: inline-block;
+    background-image: linear-gradient(red,yellow, green, blue, white, pink);
+}
+
+.box2{
+    height: 200px;
+    width: 200px;
+    border: 5px double black;
+    margin: 10px;
+    display: inline-block;
+    background-image: radial-gradient(red, yellow, green, blue, white, pink);
+}
+
+.box3{
+    height: 200px;
+    width: 200px;
+    border: 5px double black;
+    margin: 10px;
+    display: inline-block;
+    background-image: conic-gradient(red, yellow, green, blue, white, pink);
+}
+
+.box4{
+    height: 200px;
+    width: 200px;
+    border: 5px double black;
+    margin: 10px;
+    display: inline-block;
+    background-image: linear-gradient(45deg,red, yellow, green, blue, white, pink); 
+}
+
+.box5{
+    height: 200px;
+    width: 200px;
+    border: 5px double black;
+    margin: 10px;
+    display: inline-block;
+    background-image: repeating-linear-gradient(red 5%, yellow 10%, green 15%, blue 20%, white 25%, pink 30%); 
+}
+
+.box6{
+    height: 200px;
+    width: 200px;
+    border: 5px double black;
+    margin: 10px;
+    display: inline-block;
+    background-image: repeating-radial-gradient(red 5%, yellow 10%, green 15%, blue 20%, white 25%, pink 30%); 
+}
+
+.box7{
+    height: 200px;
+    width: 200px;
+    border: 5px double black;
+    margin: 10px;
+    display: inline-block;
+    background-image: repeating-conic-gradient(red 5%, yellow 10%, green 15%, blue 20%, white 25%, pink 30%); 
+}
+
+.box8{
+    height: 200px;
+    width: 200px;
+    border: 5px double black;
+    margin: 10px;
+    display: inline-block;
+    background-image: repeating-radial-gradient(circle,red 5%, yellow 10%, green 5%, blue 10%, white 5%, pink 10%); 
+}
+
+.box9{
+    height: 200px;
+    width: 200px;
+    border: 5px double black;
+    margin: 10px;
+    display: inline-block;
+    background-image: conic-gradient(red 0deg, red 90deg, yellow 90deg, yellow 180deg, green 180deg, green 270deg, blue 270deg);
+}
+
+.box10{
+    height: 200px;
+    width: 200px;
+    border: 5px double black;
+    margin: 10px;
+    display: inline-block;
+    background-image: repeating-conic-gradient(red 0deg 10deg, yellow 10deg 20deg, blue 20deg 30deg);
+}
