@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete User Information Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+        input:focus, textarea:focus, select:focus {
+            border-color: #4CAF50;
+            outline: none;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            padding: 12px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .hobby-group {
+            display: flex;
+            flex-direction: column;
+        }
+        .hobby-group label {
+            margin: 5px 0;
+            font-weight: normal;
+        }
+        .form-footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+<h1>User Information Form</h1>
+
+<form action="/submit" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required placeholder="Enter your name">
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required placeholder="Enter your email">
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender" required>
+        <option value="">Select your gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+    </select>
+
+    <label>Hobbies:</label>
+    <div class="hobby-group">
+        <label><input type="checkbox" name="hobbies" value="reading"> Reading</label>
+        <label><input type="checkbox" name="hobbies" value="traveling"> Traveling</label>
+        <label><input type="checkbox" name="hobbies" value="gaming"> Gaming</label>
+        <label><input type="checkbox" name="hobbies" value="cooking"> Cooking</label>
+    </div>
+
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="4" placeholder="Enter your message here..."></textarea>
+
+    <input type="submit" value="Submit">
+</form>
+
+<div class="form-footer">
+    <p>Thank you for filling out the form!</p>
+</div>
+
+</body>
+</html>

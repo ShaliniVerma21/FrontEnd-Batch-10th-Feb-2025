@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        input[type="date"],
+        input[type="time"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+        input[type="date"]:focus,
+        input[type="time"]:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #4CAF50;
+            outline: none;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            padding: 12px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Select Your Appointment Time</h1>
+<form action="/submit" method="POST">
+    <label for="appointment-date">Appointment Date:</label>
+    <input type="date" id="appointment-date" name="appointment-date" required>
+
+    <label for="appointment-time">Appointment Time:</label>
+    <input type="time" id="appointment-time" name="appointment-time" required>
+
+    <label for="reason">Reason for Appointment:</label>
+    <select id="reason" name="reason" required>
+        <option value="">Select a reason</option>
+        <option value="checkup">Check-up</option>
+        <option value="consultation">Consultation</option>
+        <option value="followup">Follow-up</option>
+        <option value="emergency">Emergency</option>
+    </select>
+
+    <label for="comments">Additional Comments:</label>
+    <textarea id="comments" name="comments" rows="4" placeholder="Enter any additional comments here..." maxlength="250"></textarea>
+
+    <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>

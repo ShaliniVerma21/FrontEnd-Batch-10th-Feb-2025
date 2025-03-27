@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            /* To round the corners */
+        }
+
+        thead {
+            color: white;
+            background-color: #4CAF50;
+        }
+
+        tbody {
+            color: #333;
+            background-color: #e7f3fe;
+        }
+
+        tfoot {
+            color: white;
+            background-color: #4CAF50;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            text-align: center;
+            padding: 12px;
+            transition: background-color 0.3s;
+        }
+
+        tr:hover {
+            background-color: #d1e7dd;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+
+            table,
+            th,
+            td {
+                display: block;
+                width: 100%;
+            }
+
+            th {
+                display: none;
+                /* Hide headers on small screens */
+            }
+
+            tr {
+                margin-bottom: 15px;
+                border: 1px solid #ddd;
+            }
+
+            td {
+                text-align: left;
+                padding-left: 50%;
+                /* Add padding for better readability */
+                position: relative;
+            }
+
+            td::before {
+                content: attr(data-label);
+                /* Use data-label for headers */
+                position: absolute;
+                left: 10px;
+                width: 45%;
+                padding-left: 10px;
+                font-weight: bold;
+                text-align: left;
+            }
+        }
+
+        /* Additional styling for descriptions */
+        .description {
+            font-size: 0.9em;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Shopping List</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td data-label="Item">Apples <span class="description">(Fresh and juicy)</span></td>
+                <td data-label="Quantity">5</td>
+                <td data-label="Price">$1.00</td>
+                <td data-label="Total">$5.00</td>
+            </tr>
+            <tr>
+                <td data-label="Item">Bananas <span class="description">(Rich in potassium)</span></td>
+                <td data-label="Quantity">6</td>
+                <td data-label="Price">$0.50</td>
+                <td data-label="Total">$3.00</td>
+            </tr>
+            <tr>
+                <td data-label="Item">Bread <span class="description">(Whole grain)</span></td>
+                <td data-label="Quantity">2</td>
+                <td data-label="Price">$2.00</td>
+                <td data-label="Total">$4.00</td>
+            </tr>
+            <tr>
+                <td data-label="Item">Milk <span class="description">(1 liter)</span></td>
+                <td data-label="Quantity">1</td>
+                <td data-label="Price">$3.00</td>
+                <td data-label="Total">$3.00</td>
+            </tr>
+            <tr>
+                <td data-label="Item">Eggs <span class="description">(Dozen)</span></td>
+                <td data-label="Quantity">12</td>
+                <td data-label="Price">$0.20</td>
+                <td data-label="Total">$2.40</td>
+            </tr>
+            <tr>
+                <td data-label="Item">Chicken Breast <span class="description">(500g)</span></td>
+                <td data-label="Quantity">1</td>
+                <td data-label="Price">$5.00</td>
+                <td data-label="Total">$5.00</td>
+            </tr>
+            <tr>
+                <td data-label="Item">Rice <span class="description">(1 kg)</span></td>
+                <td data-label="Quantity">1</td>
+                <td data-label="Price">$2.50</td>
+                <td data-label="Total">$2.50</td>
+            </tr>
+            <tr>
+                <td data-label="Item">Pasta <span class="description">(500g)</span></td>
+                <td data-label="Quantity">1</td>
+                <td data-label="Price">$1.75</td>
+                <td data-label="Total">$1.75</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Total</td>
+                <td>$22.65</td>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+
+</html>

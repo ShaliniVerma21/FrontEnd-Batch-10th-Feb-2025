@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Picker Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        input[type="color"],
+        input[type="text"],
+        input[type="range"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+        input[type="color"]:focus,
+        input[type="text"]:focus,
+        input[type="range"]:focus,
+        select:focus {
+            border-color: #4CAF50;
+            outline: none;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            padding: 12px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Choose Your Favorite Color</h1>
+<form action="/submit" method="POST">
+    <label for="color">Favorite Color:</label>
+    <input type="color" id="color" name="color" required>
+
+    <label for="color-name">Color Name:</label>
+    <input type="text" id="color-name" name="color-name" placeholder="Enter a name for your color" required>
+
+    <label for="intensity">Color Intensity:</label>
+    <input type="range" id="intensity" name="intensity" min="1" max="100" value="50" required>
+    <small>Adjust the intensity (1-100)</small>
+
+    <label for="category">Color Category:</label>
+    <select id="category" name="category" required>
+        <option value="">Select a category</option>
+        <option value="warm">Warm Colors</option>
+        <option value="cool">Cool Colors</option>
+        <option value="neutral">Neutral Colors</option>
+    </select>
+
+    <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>

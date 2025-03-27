@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Your Hobbies</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        input[type="submit"], input[type="reset"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            padding: 12px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            margin-right: 10px;
+        }
+        input[type="submit"]:hover, input[type="reset"]:hover {
+            background-color: #45a049;
+        }
+        .char-count {
+            font-size: 12px;
+            color: #999;
+            text-align: right;
+        }
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+        textarea:focus {
+            border-color: #4CAF50;
+            outline: none;
+        }
+    </style>
+    <script>
+        function updateCharCount() {
+            const comments = document.getElementById('comments');
+            const charCount = document.getElementById('charCount');
+            charCount.textContent = `${comments.value.length} / 250 characters`;
+        }
+    </script>
+</head>
+<body>
+
+<h1>Select Your Hobbies</h1>
+<form action="/submit" method="POST">
+    <fieldset>
+        <legend>Choose Your Hobbies:</legend>
+        <label><input type="checkbox" name="hobby" value="reading"> Reading</label>
+        <label><input type="checkbox" name="hobby" value="traveling"> Traveling</label>
+        <label><input type="checkbox" name="hobby" value="gaming"> Gaming</label>
+        <label><input type="checkbox" name="hobby" value="cooking"> Cooking</label>
+    </fieldset>
+
+    <label for="comments">Additional Comments:</label>
+    <textarea id="comments" name="comments" rows="4" placeholder="Enter any additional comments here..." oninput="updateCharCount()" maxlength="250"></textarea>
+    <div class="char-count" id="charCount">0 / 250 characters</div>
+
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+</form>
+
+</body>
+</html>

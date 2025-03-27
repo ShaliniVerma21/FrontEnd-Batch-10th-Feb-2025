@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form with Date and Time Input</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        input[type="date"],
+        input[type="time"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+        input[type="date"]:focus,
+        input[type="time"]:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #4CAF50;
+            outline: none;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            padding: 12px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .char-count {
+            font-size: 12px;
+            color: #999;
+            text-align: right;
+        }
+    </style>
+    <script>
+        function updateCharCount() {
+            const comments = document.getElementById('comments');
+            const charCount = document.getElementById('charCount');
+            charCount.textContent = `${comments.value.length} / 250 characters`;
+        }
+    </script>
+</head>
+<body>
+
+<h1>Select Your Birth Date and Time</h1>
+<form action="/submit" method="POST">
+    <label for="birthdate">Birth Date:</label>
+    <input type="date" id="birthdate" name="birthdate" required>
+
+    <label for="birthtime">Birth Time:</label>
+    <input type="time" id="birthtime" name="birthtime" required>
+
+    <label for="year">Select Year:</label>
+    <select id="year" name="year" required>
+        <option value="">Select your birth year</option>
+            <option value="2023">2023</option>
+            <option value="2022">2022</option>
+            <option value="2021">2021</option>
+            <option value="2020">2020</option>
+            <option value="2019">2019</option>
+            <option value="2018">2018</option>
+            <option value="2017">2017</option>
+            <option value="2016">2016</option>
+            <option value="2015">2015</option>
+            <option value="2014">2014</option>
+            <option value="2013">2013</option>
+            <option value="2012">2012</option>
+            <option value="2011">2011</option>
+            <option value="2010">2010</option>
+            <option value="2009">2009</option>
+            <option value="2008">2008</option>
+            <option value="2007">2007</option>
+            <option value="2006">2006</option>
+            <option value="2005">2005</option>
+            <option value="2004">2004</option>
+            <option value="2003">2003</option>
+            <option value="2002">2002</option>
+            <option value="2001">2001</option>
+            <option value="2000">2000</option>
+    </select>
+
+    <label for="comments">Additional Comments:</label>
+    <textarea id="comments" name="comments" rows="4" placeholder="Enter any additional comments here..." oninput="updateCharCount()" maxlength="250"></textarea>
+    <div class="char-count" id="charCount">0 / 250 characters</div>
+
+    <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>

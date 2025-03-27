@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Calendar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            /* To round the corners */
+        }
+
+        thead {
+            color: white;
+            background-color: #4CAF50;
+        }
+
+        tbody {
+            color: #333;
+            background-color: #e7f3fe;
+        }
+
+        tfoot {
+            color: white;
+            background-color: #4CAF50;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            text-align: center;
+            padding: 15px;
+            transition: background-color 0.3s;
+        }
+
+        tr:hover td {
+            background-color: #d1e7dd;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+
+            table,
+            th,
+            td {
+                display: block;
+                width: 100%;
+            }
+
+            th {
+                display: none;
+                /* Hide headers on small screens */
+            }
+
+            tr {
+                margin-bottom: 15px;
+                border: 1px solid #ddd;
+            }
+
+            td {
+                text-align: left;
+                padding-left: 50%;
+                /* Add padding for better readability */
+                position: relative;
+            }
+
+            td::before {
+                content: attr(data-label);
+                /* Use data-label for headers */
+                position: absolute;
+                left: 10px;
+                width: 45%;
+                padding-left: 10px;
+                font-weight: bold;
+                text-align: left;
+            }
+        }
+
+        /* Additional styling for events */
+        .event {
+            background-color: #ffcc00;
+            border-radius: 5px;
+            padding: 5px;
+            margin: 2px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Weekly Calendar</h1>
+    <table>
+        <caption>Events for the Week</caption>
+        <colgroup>
+            <col style="background-color: #1de7e7">
+            <col style="background-color: #1de7e7">
+            <col style="background-color: #1de7e7">
+            <col style="background-color: #1de7e7">
+            <col style="background-color: #1de7e7">
+            <col style="background-color: #1de7e7">
+            <col style="background-color: #1de7e7">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>MON</th>
+                <th>TUE</th>
+                <th>WED</th>
+                <th>THU</th>
+                <th>FRI</th>
+                <th>SAT</th>
+                <th>SUN</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td data-label="MON">1<br>
+                    <div class="event">Meeting at 10 AM</div>
+                </td>
+                <td data-label="TUE">2<br>
+                    <div class="event">Project Deadline</div>
+                </td>
+                <td data-label="WED">3<br>
+                    <div class="event">Team Lunch</div>
+                </td>
+                <td data-label="THU">4<br>
+                    <div class="event">Client Call</div>
+                </td>
+                <td data-label="FRI">5<br>
+                    <div class="event">Report Submission</div>
+                </td>
+                <td data-label="SAT">6<br>
+                    <div class="event">Family Gathering</div>
+                </td>
+                <td data-label="SUN">7<br>
+                    <div class="event">Relax Day</div>
+                </td>
+            </tr>
+            <tr>
+                <td data-label="MON">8<br>
+                    <div class="event">Workshop</div>
+                </td>
+                <td data-label="TUE">9<br>
+                    <div class="event">Conference</div>
+                </td>
+                <td data-label="WED">10<br>
+                    <div class="event">Webinar</div>
+                </td>
+                <td data-label="THU">11<br>
+                    <div class="event">Team Outing</div>
+                </td>
+                <td data-label="FRI">12<br>
+                    <div class="event">Feedback Session</div>
+                </td>
+                <td data-label="SAT">13<br>
+                    <div class="event">Grocery Shopping</div>
+                </td>
+                <td data-label="SUN">14<br>
+                    <div class="event">Movie Night</div>
+                </td>
+            </tr>
+            <tr>
+                <td data-label="MON">15<br>
+                    <div class="event">Health Checkup</div>
+                </td>
+                <td data-label="TUE">16<br>
+                    <div class="event">Project Kickoff</div>
+                </td>
+                <td data-label="WED">17<br>
+                    <div class="event">Training Session</div>
+                </td>
+                <td data-label="THU">18<br>
+                    <div class="event">Client Meeting</div>
+                </td>
+                <td data-label="FRI">19<br>
+                    <div class="event">Presentation Prep</div>
+                </td>
+                <td data-label="SAT">20<br>
+                    <div class="event">Visit Friends</div>
+                </td>
+                <td data-label="SUN">21<br>
+                    <div class="event">Relax Day</div>
+                </td>
+            </tr>
+            <tr>
+                <td data-label="MON">22<br>
+                    <div class="event">Team Review</div>
+                </td>
+                <td data-label="TUE">23<br>
+                    <div class="event">Budget Planning</div>
+                </td>
+                <td data-label="WED">24<br>
+                    <div class="event">Networking Event</div>
+                </td>
+                <td data-label="THU">25<br>
+                    <div class="event">Strategy Meeting</div>
+                </td>
+                <td data-label="FRI">26<br>
+                    <div class="event">End of Month Review</div>
+                </td>
+                <td data-label="SAT">27<br>
+                    <div class="event">Family BBQ</div>
+                </td>
+                <td data-label="SUN">28<br>
+                    <div class="event">Rest Day</div>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="7">Total Events This Week: 28</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>

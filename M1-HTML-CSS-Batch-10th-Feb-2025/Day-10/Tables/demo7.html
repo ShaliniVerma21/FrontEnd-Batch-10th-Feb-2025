@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden; /* To round the corners */
+        }
+
+        caption {
+            font-size: 1.5em;
+            margin: 10px;
+            color: #333;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            text-align: center;
+            padding: 12px;
+            background-color: #96D4D4;
+            transition: background-color 0.3s;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            table, th, td {
+                display: block;
+                width: 100%;
+            }
+            th {
+                display: none; /* Hide headers on small screens */
+            }
+            tr {
+                margin-bottom: 15px;
+                border: 1px solid #ddd;
+            }
+            td {
+                text-align: left;
+                padding-left: 50%; /* Add padding for better readability */
+                position: relative;
+            }
+            td::before {
+                content: attr(data-label); /* Use data-label for headers */
+                position: absolute;
+                left: 10px;
+                width: 45%;
+                padding-left: 10px;
+                font-weight: bold;
+                text-align: left;
+            }
+        }
+
+        /* Search Input */
+        .search-container {
+            margin-bottom: 20px;
+        }
+
+        .search-container input {
+            padding: 10px;
+            width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search for employees..." onkeyup="filterTable()">
+    </div>
+    
+    <table id="employeeTable">
+        <caption>Employee Details</caption>
+        <thead>
+            <tr>
+                <th>S.No.</th>
+                <th>Employee Name</th>
+                <th>Position</th>
+                <th>Department</th>
+                <th>Salary</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td data-label="S.No.">1</td>
+                <td data-label="Employee Name">John Doe</td>
+                <td data-label="Position">Software Engineer</td>
+                <td data-label="Department">IT</td>
+                <td data-label="Salary">$80,000</td>
+                <td data-label="Status">Active</td>
+            </tr>
+            <tr>
+                <td data-label="S.No.">2</td>
+                <td data-label="Employee Name">Jane Smith</td>
+                <td data-label="Position">Project Manager</td>
+                <td data-label="Department">IT</td>
+                <td data-label="Salary">$95,000</td>
+                <td data-label="Status">Active</td>
+            </tr>
+            <tr>
+                <td data-label="S.No.">3</td>
+                <td data-label="Employee Name">Emily Johnson</td>
+                <td data-label="Position">HR Manager</td>
+                <td data-label="Department">HR</td>
+                <td data-label="Salary">$70,000</td>
+                <td data-label="Status">Inactive</td>
+            </tr>
+            <tr>
+                <td data-label="S.No.">4</td>
+                <td data-label="Employee Name">Michael Brown</td>
+                <td data-label="Position">Data Analyst</td>
+                <td data-label="Department">Analytics</td>
+                <td data-label="Salary">$75,000</td>
+                <td data-label="Status">Active</td>
+            </tr>
+            <tr>
+                <td data-label="S.No.">5</td>
+                <td data-label="Employee Name">Sarah Davis</td>
+                <td data-label="Position">UX Designer</td>
+                <td data-label="Department ">Design</td>
+                <td data-label="Salary">$85,000</td>
+                <td data-label="Status">Active</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
