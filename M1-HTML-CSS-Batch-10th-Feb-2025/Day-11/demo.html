@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimedia Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif; /* Set a clean font */
+            background-color: #f4f4f4; /* Light gray background */
+            margin: 0; /* Remove default margin */
+            padding: 20px; /* Add padding around the body */
+        }
+
+        #multimedia {
+            max-width: 800px; /* Limit the width of the section */
+            margin: 0 auto; /* Center the section */
+            background: white; /* White background for the section */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            padding: 20px; /* Padding inside the section */
+        }
+
+        h2 {
+            text-align: center; /* Center the main heading */
+            color: #333; /* Dark gray color for the heading */
+        }
+
+        h3 {
+            color: #555; /* Medium gray color for subheadings */
+            margin-top: 20px; /* Space above subheadings */
+        }
+
+        img, video, audio {
+            display: block; /* Make media elements block-level */
+            margin: 20px auto; /* Center media elements */
+            border-radius: 4px; /* Slightly rounded corners */
+            max-width: 100%; /* Responsive media */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        /* Optional: Add some hover effects */
+        img:hover, video:hover, audio:hover {
+            transform: scale(1.02); /* Slightly enlarge on hover */
+            transition: transform 0.2s; /* Smooth transition */
+        }
+    </style>
+</head>
+<body>
+    <section id="multimedia">
+        <h2>Multimedia Example</h2>
+        
+        <h3>Image Example</h3>
+        <img src="./Image/image.png" alt="A beautiful landscape" width="300" height="200">
+
+        <h3>Video Example</h3>
+        <video width="320" height="240" controls>
+            <source src="./Video/2098989-uhd_3840_2160_30fps.mp4" type="video/mp4">
+            Your browser does not support the video tag. 
+            <a href="./Video/2098989-uhd_3840_2160_30fps.mp4">Download the video</a>
+        </video>
+
+        <h3>Audio Example</h3>
+        <audio controls>
+            <source src="./Audio/nature-walk-124997.mp3" type="audio/mpeg"> <!-- Corrected type -->
+            Your browser does not support the audio element. 
+            <a href="./Audio/nature-walk-124997.mp3">Download the audio</a>
+        </audio>
+    </section>
+</body>
+</html>

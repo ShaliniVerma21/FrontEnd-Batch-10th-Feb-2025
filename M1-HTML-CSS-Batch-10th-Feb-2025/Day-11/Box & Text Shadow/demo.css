@@ -1,0 +1,336 @@
+.box {
+    height: 200px;
+    width: 200px;
+    border: 5px double black;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    display: block;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Box shadow for depth */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+}
+
+.box:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5); /* Increase shadow on hover */
+}
+h1{
+    text-align: center;
+}
+.b{
+    height: 300px;
+    width: 300px;
+    border: 5px double black;
+    margin: 10px;
+    padding: 5px;
+    display: inline-block;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Box shadow for depth */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+    display: inline-block;
+}
+.b:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5); /* Increase shadow on hover */
+}
+
+/* Box 1 */
+.box1 {
+    background-image: linear-gradient(red, rgb(49, 253, 49), rgb(160, 160, 246), white);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Box 2 */
+.box2 {
+    background-image: linear-gradient(to right, yellow, green, blue, white);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Box 3 */
+.box3 {
+    background-image: linear-gradient(to bottom, red, black, blue, white);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Box 4 */
+.box4 {
+    background-image: linear-gradient(180deg, red 10%, yellow 20%, blue 30%, white 40%);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Box 5 */
+.box5 {
+    background-image: repeating-linear-gradient(red 10%, green, blue, white 20%);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Box 6 */
+.box6 {
+    background-image: repeating-linear-gradient(black 5%, red 10%, green, yellow, blue 5%, white 10%);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Box 7 */
+.box7 {
+    background-image: repeating-linear-gradient(to right, black 5%, red 10%, green, yellow, blue 5%, white 10%);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Box 8 */
+.box8 {
+    background-image: repeating-linear-gradient(black 5%, red 10%, green 15%, yellow 20%, blue 25%, white 30%);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Box 9 */
+.box9 {
+    background-image: conic-gradient(red, green, blue, white);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Box 10 */
+.box10 {
+    background-image: radial-gradient(red, green, blue, white);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Box 11 */
+.box11 {
+    background-image: repeating-conic-gradient(yellow 10%, red 20%, green 30%, blue 40%, white 60%);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Box 12 */
+.box12 {
+    background-image: repeating-radial-gradient(yellow 10%, red 20%, green 30%, blue 40%, white 60%);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Box 13 */
+.box13 {
+    background-image: radial-gradient(closest-side, yellow 10%, red 20%, green 30%, blue 40%, white 60%);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5 );
+}
+
+/* Box 14 */
+.box14 {
+    background-image: radial-gradient(farthest-side, yellow 10%, red 20%, green 30%, blue 40%, white 60%);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Box 15 */
+.box15 {
+    background-image: repeating-conic-gradient(red 0deg 10deg, yellow 10deg 20deg, blue 20deg 30deg);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Box 16 */
+.box16 {
+    background-image: linear-gradient(to top right, purple, orange);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Box 17 */
+.box17 {
+    background-image: linear-gradient(to bottom left, teal, pink);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Box 18 */
+.box18 {
+    background-image: linear-gradient(to top, blue, white);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Box 19 */
+.box19 {
+    background-image: linear-gradient(to right, violet, indigo, blue);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Box 20 */
+.box20 {
+    background-image: linear-gradient(to left, green, yellow);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Box 21 */
+.box21 {
+    background-image: repeating-linear-gradient(white 10%, blue 10%);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Box 22 */
+.box22 {
+    background-image: conic-gradient(orange, yellow, green);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Box 23 */
+.box23 {
+    background-image: radial-gradient(circle, red, blue);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Box 24 */
+.box24 {
+    background-image: repeating-radial-gradient(circle, yellow 10%, green 20%);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Box 25 */
+.box25 {
+    background-image: linear-gradient(to bottom right, pink, purple);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Box 26 */
+.box26 {
+    background-image: linear-gradient(to top left, lightblue, lightgreen);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Box 27 */
+.box27 {
+    background-image: linear-gradient(to bottom, darkred, darkblue);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Box 28 */
+.box28 {
+    background-image: repeating-linear-gradient(black 5%, white 5%);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Box 29 */
+.box29 {
+    background-image: conic-gradient(blue, green, yellow);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Box 30 */
+.box30 {
+    background-image: radial-gradient(ellipse at center, red, yellow);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Box 31 */
+.box31 {
+    background-image: repeating-conic-gradient(green 0deg 10deg, blue 10deg 20deg);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Box 32 */
+.box32 {
+    background-image: linear-gradient(to right, lightgray, darkgray );
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Box 33 */
+.box33 {
+    background-image: linear-gradient(to bottom, lightcoral, lightseagreen);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Box 34 */
+.box34 {
+    background-image: repeating-linear-gradient(white 10%, gray 10%);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Box 35 */
+.box35 {
+    background-image: conic-gradient(pink, purple, blue);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Box 36 */
+.box36 {
+    background-image: radial-gradient(circle, yellow, orange);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Box 37 */
+.box37 {
+    background-image: linear-gradient(to top, darkblue, lightblue);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Box 38 */
+.box38 {
+    background-image: repeating-radial-gradient(circle, red 10%, white 20%);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Box 39 */
+.box39 {
+    background-image: linear-gradient(to right, teal, navy);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Box 40 */
+.box40 {
+    background-image: conic-gradient(gold, silver, bronze);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Box 41 */
+.box41 {
+    background-image: radial-gradient(ellipse at center, lightpink, lightyellow);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Box 42 */
+.box42 {
+    background-image: linear-gradient(to bottom right, darkgreen, lightgreen);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Box 43 */
+.box43 {
+    background-image: repeating-linear-gradient(black 5%, gray 5%);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Box 44 */
+.box44 {
+    background-image: conic-gradient(blue, cyan, magenta);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Box 45 */
+.box45 {
+    background-image: radial-gradient(circle, darkorange, orange);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Box 46 */
+.box46 {
+    background-image: linear-gradient(to top left, lightgray, darkgray);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Box 47 */
+.box47 {
+    background-image: repeating-conic-gradient(red 0deg 10deg, yellow 10deg 20deg);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Box 48 */
+.box48 {
+    background-image: linear-gradient(to bottom, lightblue, white);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Box 49 */
+.box49 {
+    background-image: radial-gradient(circle, violet, indigo);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Box 50 */
+.box50 {
+    background-image: linear-gradient(to right, coral, lightcoral);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
