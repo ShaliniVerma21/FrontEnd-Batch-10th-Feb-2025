@@ -1,0 +1,90 @@
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+    line-height: 1.6; /* Improved readability */
+}
+
+/* Heading Styles */
+h2 {
+    color: #333;
+    border-bottom: 2px solid #007bff; /* Underline effect for headings */
+    padding-bottom: 5px; /* Space between heading and content */
+}
+
+/* City Class Styles */
+.city {
+    background-color: #e2e2e2;
+    padding: 15px; /* Increased padding for better spacing */
+    margin: 15px 0; /* Increased margin for better separation */
+    border-radius: 8px; /* More rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Box Styles for Different CSS */
+.box1, .box2, .box3 {
+    padding: 15px; /* Increased padding for better spacing */
+    margin: 15px 0; /* Increased margin for better separation */
+    border-radius: 8px; /* More rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.box1 {
+    background-color: #ffcccb; /* Light Red */
+}
+
+.box2 {
+    background-color: #add8e6; /* Light Blue */
+}
+
+.box3 {
+    background-color: #90ee90; /* Light Green */
+}
+
+/* Link Styles */
+a {
+    color: #007bff; /* Bootstrap Primary Color */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+    color: #0056b3; /* Darker shade on hover */
+}
+
+/* Image Styles */
+img {
+    margin: 15px 0; /* Increased margin around images */
+    max-width: 100%; /* Responsive images */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* List Styles */
+ul {
+    padding-left: 20px; /* Indentation for list items */
+}
+
+/* Iframe Styles */
+iframe {
+    border: 1px solid #ccc; /* Border for iframe */
+    border-radius: 5px; /* Rounded corners for iframe */
+    max-width: 100%; /* Responsive iframe */
+    height: 400px; /* Fixed height */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    body {
+        margin: 10px; /* Reduce margin on smaller screens */
+    }
+
+    h2 {
+        font-size: 1.5em; /* Adjust heading size */
+    }
+
+    .city, .box1, .box2, .box3 {
+        padding: 10px; /* Adjust padding */
+    }
+}
