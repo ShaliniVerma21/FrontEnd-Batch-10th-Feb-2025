@@ -1,0 +1,232 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    /* Ensures padding and border are included in element's total width and height */
+}
+
+/* CSS Variables for Colors */
+:root {
+    --primary-color: #2d455d; /* Dark color for header and footer */
+    --secondary-color: #e74c3c; /* Tomato color for highlights */
+    --background-color: #ecf0f1; /* Light background color */
+    --white-color: #ffffff; /* White color for text and backgrounds */
+    --shadow-color: rgba(0, 0, 0, 0.2); /* Shadow color */
+}
+
+/* Body Styles */
+body {
+    font-family: 'Arial', sans-serif; /* Font family for the entire page */
+    line-height: 1.6; /* Line height for better readability */
+    background-color: var(--background-color); /* Background color */
+    color: var(--primary-color); /* Default text color */
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(to right, #2c3e50, #4ca1af); /* Gradient background for header */
+    color: var(--white-color); /* Header text color */
+    padding: 30px; /* Increased padding for header */
+    text-align: center; /* Center align header text */
+    box-shadow: 0 4px 20px var(--shadow-color); /* Box shadow for header */
+}
+
+/* Navigation Styles */
+nav ul {
+    list-style: none; /* Remove bullet points from list */
+    padding: 0; /* Remove padding */
+}
+
+nav ul li {
+    display: inline; /* Display list items inline */
+    margin: 0 20px; /* Increased margin between items */
+}
+
+nav a {
+    color: var(--white-color); /* Link color */
+    text-decoration: none; /* Remove underline from links */
+    position: relative; /* Position for pseudo-element */
+    font-weight: bold; /* Bold text for links */
+    transition: color 0.3s; /* Transition for link color */
+}
+
+nav a:hover {
+    color: var(--secondary-color); /* Change link color on hover */
+}
+
+nav a::after {
+    content: ''; /* Pseudo-element for underline effect */
+    display: block;
+    width: 0;
+    height: 3px;
+    background: var(--secondary-color); /* Underline color */
+    transition: width 0.3s; /* Transition for smooth effect */
+    position: absolute;
+    bottom: -5px; /* Position below the text */
+    left: 50%; /* Center the underline */
+}
+
+nav a:hover::after {
+    width: 100%; /* Expand underline on hover */
+    left: 0; /* Align to the left */
+}
+
+/* Main Section Styles */
+main {
+    padding: 40px; /* Increased padding to main content */
+}
+
+/* Section Styles */
+section {
+    margin-bottom: 50px; /* Space between sections */
+    padding: 30px; /* Increased padding for sections */
+    background: var(--white-color); /* White background for sections */
+    border-radius: 10px; /* More rounded corners */
+    box-shadow: 0 4px 20px var(--shadow-color); /* Enhanced box shadow for sections */
+    transition: transform 0.3s; /* Transition for hover effect */
+}
+
+section:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+h2 {
+    color: var(--secondary-color); /* Color for section headings */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Enhanced text shadow for headings */
+    margin-bottom: 15px; /* Space below headings */
+}
+
+/* Form Styles */
+form {
+    display: flex; /* Use flexbox for form layout */
+    flex-direction: column; /* Stack form elements vertically */
+}
+
+label {
+    margin: 15px 0 5px; /* Space around labels */
+    font-weight: bold; /* Bold text for labels */
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 12px; /* Increased padding inside input fields */
+    border: 1px solid #ccc; /* Border for input fields */
+    border-radius: 5px; /* Rounded corners */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Transition for border color and shadow */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: var(--secondary-color); /* Change border color on focus box-shadow: 0 0 5px var(--secondary-color); /* Add shadow on focus */
+    outline: none; /* Remove default outline */
+}
+
+input[type="submit"] {
+    background: linear-gradient(45deg, var(--secondary-color), #c0392b); /* Gradient background for submit button */
+    color: var(--white-color); /* Submit button text color */
+    border: none; /* Remove border */
+    padding: 12px; /* Increased padding for button */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.3s; /* Transition for background color and scale */
+    box-shadow: 0 4px 10px var(--shadow-color); /* Box shadow for button */
+}
+
+input[type="submit"]:hover {
+    background: linear-gradient(45deg, #c0392b, var(--secondary-color)); /* Darker gradient on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+/* Footer Styles */
+footer {
+    background: var(--primary-color); /* Use the primary color for the footer */
+    color: var(--white-color); /* White text color */
+    text-align: center; /* Center align text */
+    padding: 30px 20px; /* Increased padding for better spacing */
+    position: relative; /* Position for footer */
+    bottom: 0; /* Align to bottom */
+    width: 100%; /* Full width */
+    box-shadow: 0 -2px 10px var(--shadow-color); /* Shadow for footer */
+}
+
+.footer-content {
+    max-width: 1200px; /* Limit the width of the footer content */
+    margin: 0 auto; /* Center the footer content */
+    padding: 0 15px; /* Add horizontal padding for smaller screens */
+}
+
+.footer-links {
+    list-style: none; /* Remove bullet points from list */
+    padding: 0; /* Remove padding */
+    margin: 15px 0; /* Margin for spacing */
+}
+
+.footer-links li {
+    display: inline-block; /* Use inline-block for better spacing control */
+    margin: 0 15px; /* Space between links */
+}
+
+.footer-links a {
+    color: var(--white-color); /* Link color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s, transform 0.3s; /* Transition for link color and scale */
+}
+
+.footer-links a:hover {
+    color: var(--secondary-color); /* Change link color on hover */
+    transform: scale(1.05); /* Slightly enlarge link on hover */
+}
+
+.social-media {
+    margin-top: 20px; /* Space above social media links */
+}
+
+.social-media a {
+    color: var(--white-color); /* Social media link color */
+    margin: 0 10px; /* Space between social media links */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s, transform 0.3s; /* Transition for link color and scale */
+}
+
+.social-media a:hover {
+    color: var(--secondary-color); /* Change color on hover */
+    transform: scale(1.1); /* Slightly enlarge social media link on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    nav ul li {
+        display: block; /* Stack navigation items on small screens */
+        margin: 10px 0; /* Add margin for spacing */
+    }
+
+    section {
+        padding: 20px; /* Reduce padding on small screens */
+    }
+
+    h2 {
+        font-size: 1.5em; /* Adjust heading size for smaller screens */
+    }
+    .footer-links li {
+        display: block; /* Stack links vertically on small screens */
+        margin: 10px 0; /* Space between stacked links */
+    }
+
+    .social-media {
+        margin-top: 15px; /* Adjust space for social media links */
+    }
+}
+
+/* Style your Image */
+img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border-radius: 10px; /* Rounded corners for images */
+    box-shadow: 0 4px 10px var(--shadow-color); /* Box shadow for images */
+}
