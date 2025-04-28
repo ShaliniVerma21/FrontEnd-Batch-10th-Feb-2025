@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background: #007BFF;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+h1, h2 {
+    margin: 20px 0;
+}
+
+ul, ol, dl {
+    margin: 10px 0;
+    padding: 0 20px;
+}
+
+.fruit-list {
+    list-style-type: none; /* Remove default bullets */
+}
+
+.fruit-list li {
+    margin: 5px 0;
+}
+
+.icon {
+    margin-right: 10px; /* Space between icon and text */
+}
+
+.salad-steps {
+    list-style-type: decimal; /* Use decimal numbers for ordered list */
+}
+
+.menu-items dt {
+    font-weight: bold; /* Bold for terms */
+}
+
+.menu-items dd {
+    margin-bottom: 10px; /* Space between descriptions */
+}
+
+.daily-specials {
+    list-style-type: disc; /* Use default bullets for nested list */
+}
+
+.daily-specials ul {
+    list-style-type: circle; /* Use circles for nested items */
+    margin-left: 20px; /* Indent nested items */
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+}

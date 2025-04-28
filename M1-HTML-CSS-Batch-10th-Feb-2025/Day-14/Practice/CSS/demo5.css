@@ -1,0 +1,265 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4; /* Light gray background */
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(to right, #4a90e2, #9013fe); /* Gradient background */
+    color: white;
+    padding: 30px 0; /* Increased padding for a more spacious look */
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    position: sticky; /* Sticky header */
+    top: 0; /* Stick to the top */
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-transform: uppercase; /* Uppercase for emphasis */
+    animation: fadeIn 1s ease; /* Fade-in animation */
+}
+
+/* Navigation Styles */
+nav {
+    background: #333; /* Dark background for navigation */
+    color: white;
+    padding: 15px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px; /* Increased padding for better click area */
+    border-radius: 5px; /* Rounded corners */
+    transition: background 0.3s, transform 0.3s; /* Transition for hover effects */
+}
+
+nav ul li a:hover {
+    background: #575757; /* Darker background on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Main Content Styles */
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+section {
+    background: white; /* White background for sections */
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transition for hover effects */
+}
+
+section:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+h2 {
+    color: #333; /* Darker color for headings */
+    margin-bottom: 10px;
+    border-bottom: 2px solid #4a90e2; /* Underline effect */
+    padding-bottom: 5px; /* Space below heading */
+}
+
+ul {
+    list-style-type: none; /* Remove default list styling */
+}
+
+figure {
+    margin: 20px 0;
+}
+
+figure img {
+    max-width: 100%; /* Responsive image */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for images */
+    transition: transform 0.3s; /* Transition for hover effects */
+}
+
+figure img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+blockquote {
+    background: #f9f9f9; /* Light background for blockquotes */
+    border-left: 5px solid #4a90e2; /* Accent color */
+    margin: 20px 0;
+    padding: 10px 20px;
+    font-style: italic; /* Italic text for quotes */
+    border-radius: 5px; /* Rounded corners */
+    transition: background 0.3s; /* Transition for hover effects */
+}
+
+blockquote:hover {
+    background: #e9ecef; /* Change background on hover */
+}
+
+/* Form Styles */
+form {
+    background: #ffffff; /* White background for the form */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sub tle shadow for depth */
+    transition: box-shadow 0.3s; /* Transition for hover effects */
+}
+
+form:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+fieldset {
+    border: none; /* Remove default border */
+    margin: 0; /* Reset margin */
+    padding: 0; /* Reset padding */
+}
+
+legend {
+    font-size: 1.5em; /* Larger font size for the legend */
+    margin-bottom: 10px; /* Space below the legend */
+    color: #4a90e2; /* Accent color for the legend */
+}
+
+label {
+    display: block; /* Block display for labels */
+    margin-bottom: 5px; /* Space below labels */
+    font-weight: bold; /* Bold text for labels */
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%; /* Full width inputs */
+    padding: 10px; /* Padding for inputs */
+    margin-bottom: 15px; /* Space below inputs */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    transition: border-color 0.3s; /* Transition for focus effects */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #4a90e2; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+textarea {
+    resize: vertical; /* Allow vertical resizing only */
+    min-height: 100px; /* Minimum height for textarea */
+}
+
+button {
+    background-color: #4a90e2; /* Primary button color */
+    color: white; /* Text color */
+    border: none; /* Remove default border */
+    padding: 10px 20px; /* Padding for button */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.3s; /* Transition for hover effects */
+}
+
+button:hover {
+    background-color: #357ABD; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Footer Styles */
+footer {
+    background: #333; /* Dark background for footer */
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer .footer-content {
+    max-width: 1200px; /* Centering the footer content */
+    margin: auto;
+}
+
+footer .social-media {
+    margin: 10px 0;
+}
+
+footer .social-media a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s; /* Transition for hover effects */
+}
+
+footer .social-media a:hover {
+    color: #e67e22; /* Change color on hover */
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: center; /* Center items */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Space between items */
+    }
+
+    section {
+        margin: 10px; /* Reduce margin on small screens */
+    }
+
+    header h1 {
+        font-size: 2em; /* Adjust header size for smaller screens */
+    }
+
+    form {
+        padding: 15px; /* Reduce padding on smaller screens */
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        padding: 8px; /* Reduce padding for smaller screens */
+    }
+
+    button {
+        padding: 8px 16px; /* Adjust button padding */
+    }
+}

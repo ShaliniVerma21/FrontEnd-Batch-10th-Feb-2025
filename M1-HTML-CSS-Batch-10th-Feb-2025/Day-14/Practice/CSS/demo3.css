@@ -1,0 +1,218 @@
+/* General Styles */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #e9ecef; /* Light gray background */
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(135deg, #2c3e50, #34495e); /* Gradient background */
+    color: #ffffff;
+    padding: 30px 0;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: sticky; /* Sticky header */
+    top: 0; /* Stick to the top */
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    letter-spacing: 1px; /* Spacing between letters */
+    animation: fadeIn 1s ease; /* Fade-in animation */
+}
+
+/* Navigation Styles */
+nav ul {
+    padding: 0;
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease; /* Transition for hover effects */
+}
+
+nav ul li a:hover {
+    color: #f39c12; /* Change color on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+    max-width: 1200px; /* Centering the main content */
+    margin: auto;
+}
+
+/* Section Styles */
+section {
+    background: #ffffff;
+    margin: 20px 0;
+    padding: 30px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease; /* Transition for shadow effect */
+}
+
+section:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+h2 {
+    color: #2c3e50; /* Darker color for headings */
+    border-bottom: 2px solid #f39c12; /* Underline effect */
+    padding-bottom: 10px;
+}
+
+/* Figure Styles */
+figure {
+    margin: 0;
+}
+
+figure img {
+    max-width: 100%;
+    border-radius: 8px; /* Rounded corners for images */
+    transition: transform 0.3s ease; /* Zoom effect on hover */
+}
+
+figure img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Blockquote Styles */
+blockquote {
+    background: #f8f9fa; /* Light background for blockquotes */
+    padding: 15px;
+    border-left: 5px solid #f39c12; /* Accent color */
+    margin: 20px 0;
+    font-style: italic;
+    border-radius: 5px;
+}
+
+/* Footer Styles */
+footer {
+    background: linear-gradient(135deg, #2c3e50, #34495e); /* Gradient background */
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.footer-content {
+    max-width: 1200px; /* Centering the footer content */
+    margin: auto;
+}
+
+footer nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+footer nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Transition for hover effects */
+}
+
+footer nav ul li a:hover {
+    color: #f39c12; /* Change color on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    header h1 {
+        font-size:  2em; /* Smaller header on mobile */
+    }
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Additional Advanced Styles */
+button {
+    background-color: #f39c12; /* Button color */
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transition for button effects */
+}
+
+button:hover {
+    background-color: #e67e22; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 0;
+    transition: border-color 0.3s ease; /* Transition for input focus */
+}
+
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+    border-color: #f39c12; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Card Styles */
+.card {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    padding: 20px;
+    transition: transform 0.3s ease; /* Transition for card hover */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+/* Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.pt-20 {
+    padding-top: 20px;
+}
