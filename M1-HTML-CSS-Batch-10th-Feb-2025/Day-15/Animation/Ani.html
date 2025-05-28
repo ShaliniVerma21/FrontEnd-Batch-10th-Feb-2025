@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color: aquamarine;
+            height: 700px;
+            width: 900px;
+            margin: 20px;
+            padding-top: 50px;
+        }
+        .box{
+            background-color: blue;
+            border: 2px solid gray;
+            height: 100px;
+            width: 150px;
+            border-radius: 60%;
+            animation-name: MyAnimation;
+            animation-duration: 5s;
+            animation-iteration-count: 5;
+            animation-timing-function: linear;
+            animation-delay: 1s;
+            animation-direction: alternate;
+            animation-play-state: running;
+        }
+        @keyframes MyAnimation {
+            from{
+                background-color: rgb(46, 202, 103);
+            }
+            to{
+                background-color: rgb(255, 127, 219);
+                transform: translate(750px);                                        
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+</html>

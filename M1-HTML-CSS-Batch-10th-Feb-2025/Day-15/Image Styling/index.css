@@ -1,0 +1,60 @@
+h1{
+    text-align: center;
+    font-size: 50px;
+    text-decoration: underline;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+}
+
+.grid-container>div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+}
+
+.item8 {
+    grid-area: 1 / 2 / 5 / 6;
+}
+
+img{
+    display: block;
+    margin-left: 0px;
+    margin-right: 0px;
+    border: 10px double dodgerblue;
+    border-radius: 10%;
+    float: left;
+}
+#i1{
+    filter:grayscale(100%);
+}
+#i2{
+    filter:blur(5px);
+}
+#i3{
+    filter:brightness(220%);
+}
+#i4{
+    filter:contrast(180%);
+}
+#i5{
+    filter:hue-rotate(180deg);
+}
+#i6{
+    filter:invert(100%);
+}
+#i7{
+    filter:opacity(80%);
+}
+#i8{
+    filter:saturate(8);
+}
+#i9{
+    filter:sepia(100%);
+}
+#i10{
+    filter:drop-shadow(8px 8px 10px red);
+}
