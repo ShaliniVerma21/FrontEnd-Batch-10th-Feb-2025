@@ -1,0 +1,16 @@
+.box{
+    background-color: blueviolet;
+    width: 500px;
+    height: 500px;
+    border: 5px solid black;
+    border-radius: 50%;
+}
+
+h1{
+    text-align: center;
+    text-shadow: 3px 5px 6px purple;
+    color: blue;
+    font-size: 50px;
+    font-weight: 900;
+    padding-top: 160px;
+}
