@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Session-7</title>
+    <link rel="stylesheet" type="text/css" href="./CSS/demo.css">
+</head>
+<body>
+    <!--Placing scripts at the bottom of the <body> element improves the display speed,
+         because script interpretation slows down the display.-->
+    <br>
+    <button Type="button" onclick="document.getElementById('d1').innerHTML=Date()">Click Me</button>
+    <p id="d1"></p><br>
+    <button type="button" onclick='document.getElementById("d2").innerHTML="Hello JavaScript"'>Click</button>
+    <p id="d2"></p><br>
+    <button type="button" onclick='document.getElementById("d3").style.backgroundColor="red"'>Click</button>
+    <p id="d3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit quaerat distinctio corrupti reiciendis
+         veritatis repudiandae tempore blanditiis voluptates, nesciunt numquam reprehenderit! Pariatur odit dicta 
+         asperiores tempora ut nihil tempore non.</p>
+    <br>
+    <button type="button" onclick='document.getElementById("d3").innerHTML="Paragraph is Changed Now."'>Change Paragraph</button>
+    <br><br>
+    <button type="button" onclick="window.print()">Print</button>
+    <br><br> 
+
+
+</body>
+<script src="./JS/typeconversion.js">
+</script>
+</html>
