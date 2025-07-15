@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Childhood Memories</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Fredoka One', cursive, Arial, sans-serif;
+      background: linear-gradient(135deg, #f9d423 0%, #ff4e50 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: #ff6f61;
+      color: #fff;
+      padding: 2rem 1rem 1rem 1rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .logo {
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+      display: inline-block;
+      animation: bounce 1.5s infinite alternate;
+    }
+    @keyframes bounce {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-15px); }
+    }
+    nav {
+      margin-top: 1rem;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-size: 1.1rem;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #f9d423;
+    }
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1rem;
+    }
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+    .card {
+      background: #fff;
+      border-radius: 1.5rem;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+      width: 260px;
+      padding: 1.5rem;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(40px);
+      animation: fadeInUp 0.8s forwards;
+    }
+    .card:nth-child(2) { animation-delay: 0.2s; }
+    .card:nth-child(3) { animation-delay: 0.4s; }
+    .card:nth-child(4) { animation-delay: 0.6s; }
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .card:hover {
+      transform: scale(1.07) rotate(-2deg);
+      box-shadow: 0 16px 32px rgba(255,110,97,0.18);
+      background: #ffe5b4;
+    }
+    .card img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      margin-bottom: 1rem;
+      border-radius: 50%;
+      background: #f9d42322;
+      padding: 0.5rem;
+      transition: background 0.3s;
+    }
+    .card:hover img {
+      background: #ff6f6122;
+    }
+    .fun-btn {
+      background: #f9d423;
+      color: #ff4e50;
+      border: none;
+      border-radius: 2rem;
+      padding: 0.7rem 2rem;
+      font-size: 1.1rem;
+      font-family: inherit;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: background 0.3s, color 0.3s;
+      margin-bottom: 1.5rem;
+    }
+    .fun-btn:hover {
+      background: #ff4e50;
+      color: #fff;
+    }
+    .fun-fact {
+      background: #fffbe7;
+      color: #ff4e50;
+      border-radius: 1rem;
+      padding: 1rem 2rem;
+      margin-top: 1rem;
+      font-size: 1.1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      display: none;
+      animation: popIn 0.5s;
+    }
+    @keyframes popIn {
+      from { transform: scale(0.7); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+    footer {
+      background: #ff6f61;
+      color: #fff;
+      text-align: center;
+      padding: 1.2rem 0 0.7rem 0;
+      font-size: 1rem;
+      letter-spacing: 1px;
+      margin-top: auto;
+    }
+    .footer-links a {
+      color: #fff;
+      margin: 0 0.5rem;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: color 0.3s;
+    }
+    .footer-links a:hover {
+      color: #f9d423;
+    }
+    @media (max-width: 800px) {
+      .cards {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">🌈 My Childhood Memories</div>
+    <nav>
+      <a href="#games">Games</a>
+      <a href="#cartoons">Cartoons</a>
+      <a href="#friends">Friends</a>
+      <a href="#funfact">Fun Fact</a>
+    </nav>
+  </header>
+  <main>
+    <button class="fun-btn" id="showFactBtn">Show a Fun Fact!</button>
+    <div class="fun-fact" id="funFact"></div>
+    <div class="cards">
+      <div class="card" id="games">
+        <img src="https://cdn-icons-png.flaticon.com/512/616/616554.png" alt="Games">
+        <h2>Favorite Game</h2>
+        <p>Hide and Seek was the best! Running, hiding, and giggling with friends until sunset.</p>
+      </div>
+      <div class="card" id="cartoons">
+        <img src="https://cdn-icons-png.flaticon.com/512/616/616494.png" alt="Cartoons">
+        <h2>Beloved Cartoon</h2>
+        <p>Nothing beat waking up early for Tom & Jerry or Doraemon on weekends!</p>
+      </div>
+      <div class="card" id="friends">
+        <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Friends">
+        <h2>Best Friends</h2>
+        <p>Endless laughter, silly secrets, and making up our own games in the playground.</p>
+      </div>
+      <div class="card" id="memories">
+        <img src="https://cdn-icons-png.flaticon.com/512/616/616430.png" alt="Memories">
+        <h2>Sweet Memories</h2>
+        <p>Ice cream on hot days, paper boats in puddles, and bedtime stories every night.</p>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-links">
+      <a href="#">Contact</a> |
+      <a href="#">Instagram</a> |
+      <a href="#">Facebook</a>
+    </div>
+    <div style="margin-top:0.5rem;">&copy; 2024 My Childhood Memories</div>
+  </footer>
+  <script>
+    const facts = [
+      "Did you know? The game 'Hide and Seek' is played in almost every country, with different names!",
+      "Cartoons like Tom & Jerry have been entertaining kids since 1940!",
+      "Making friends as a child helps develop important social skills for life.",
+      "Did you ever try to eat ice cream faster than it could melt? Childhood challenge!",
+      "Paper boats have been a rainy day favorite for generations."
+    ];
+    const btn = document.getElementById('showFactBtn');
+    const factDiv = document.getElementById('funFact');
+    btn.addEventListener('click', () => {
+      const randomFact = facts[Math.floor(Math.random() * facts.length)];
+      factDiv.textContent = randomFact;
+      factDiv.style.display = 'block';
+      factDiv.style.animation = 'popIn 0.5s';
+    });
+    // Card click animation
+    document.querySelectorAll('.card').forEach(card => {
+      card.addEventListener('click', () => {
+        card.style.transition = 'transform 0.2s';
+        card.style.transform = 'scale(1.12) rotate(2deg)';
+        setTimeout(() => {
+          card.style.transform = '';
+        }, 200);
+      });
+    });
+  </script>
+</body>
+</html>
