@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-1 Rolling Dice</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        #rollButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Task-1 Rolling Dice</h1>
+    <h2>Dice Roll Game</h2>
+    <button id="rollButton">Roll the Dice</button>
+    <div id="result"></div>
+
+    <script>
+        // Initialize current number
+        let currentNumber = 0;
+
+        // Function to roll a dice
+        function rollDice() {
+            // Generate a random number between 1 and 6
+            return Math.floor(Math.random() * 6) + 1;
+        }
+
+        // Function to handle the dice roll
+        function handleRoll() {
+            // Roll the dice
+            const rolledNumber = rollDice();
+            currentNumber += rolledNumber;
+
+            // Display the rolled number and current total
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = `Rolled: ${rolledNumber}<br>Current Total: ${currentNumber}`;
+
+            // Check if the current number exceeds 20
+            if (currentNumber > 20) {
+                resultDiv.innerHTML += "<br><span style='color: green;'>Player wins!</span>";
+                // Reset the game
+                currentNumber = 0; // Reset current number for a new game
+            } else {
+                resultDiv.innerHTML += "<br><span style='color: red;'>Keep rolling!</span>";
+            }
+        }
+
+        // Add event listener to the button
+        document.getElementById('rollButton').addEventListener('click', handleRoll);
+    </script>
+</body>
+
+</html>

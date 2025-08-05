@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-8 Calculating Factorial</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input {
+            padding: 10px;
+            width: 200px;
+            margin: 10px 0;
+        }
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculate Factorial</h1>
+    <input type="number" id="inputNumber" placeholder="Enter a non-negative integer" required>
+    <button id="calculateButton">Calculate Factorial</button>
+    <div class="result" id="result"></div>
+
+    <script>
+        document.getElementById("calculateButton").addEventListener("click", function() {
+            const inputNumber = parseInt(document.getElementById("inputNumber").value);
+            const resultDiv = document.getElementById("result");
+
+            if (isNaN(inputNumber) || inputNumber < 0) {
+                resultDiv.innerText = "Please enter a valid non-negative integer.";
+                return;
+            }
+
+            const factorial = calculateFactorial(inputNumber);
+            resultDiv.innerText = `Factorial of ${inputNumber} is ${factorial}.`;
+        });
+
+        function calculateFactorial(n) {
+            if (n === 0 || n === 1) {
+                return 1;
+            }
+            return n * calculateFactorial(n - 1);
+        }
+    </script>
+</body>
+</html>

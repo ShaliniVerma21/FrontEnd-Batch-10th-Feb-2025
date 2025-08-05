@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-5 MIN MAX ASC DESC</title>
+    <style>
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 28px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        #numberInput {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            padding: 10px;
+            width: 200px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #0080ff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0069d1;
+        }
+
+        #output {
+            margin-top: 20px;
+        }
+
+        #output p {
+            margin: 10px 0;
+            font-size: 18px;
+            color: #555;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>>Number Order Display</h1>
+    <div class="container">
+        <h2>Number Analysis Tool</h2>
+        <input type="number" id="numberInput" placeholder="Enter a positive integer" />
+        <button onclick="displayNumbers()">Display Numbers</button>
+        <div id="output">
+            <p id="descOutput"></p>
+            <p id="ascOutput"></p>
+            <p id="maxOutput"></p>
+            <p id="minOutput"></p>
+        </div>
+    </div>
+    <script>
+        function displayNumbers() {
+            var number = parseInt(document.getElementById('numberInput').value);
+            if (isNaN(number) || number <= 0) {
+                alert("Please enter a positive integer.");
+                return;
+            }
+            var d = Array.from(String(number), Number);
+            var descDigits = d.slice().sort(function (a, b) { return b - a; });
+            var descOutput = descDigits.join('');
+            var ascDigits = d.slice().sort(function (a, b) { return a - b; });
+            var ascOutput = ascDigits.join('');
+            document.getElementById('descOutput').innerText = 'Descending Order: ' + descOutput;
+            document.getElementById('ascOutput').innerText = 'Ascending Order: ' + ascOutput;
+            var max = Math.max(...d);
+            var min = Math.min(...d);
+            document.getElementById('maxOutput').innerText = 'Maximum Value: ' + max;
+            document.getElementById('minOutput').innerText = 'Minimum Value: ' + min;
+        }
+    </script>
+
+</body>
+
+</html>

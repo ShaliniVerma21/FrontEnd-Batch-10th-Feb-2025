@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-7 Finding the Most Frequent Character in a String</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input {
+            padding: 10px;
+            width: 300px;
+            margin: 10px 0;
+        }
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Find the Most Frequent Character</h1>
+    <input type="text" id="inputString" placeholder="Enter a string" required>
+    <button id="findButton">Find Most Frequent Character</button>
+    <div class="result" id="result"></div>
+
+    <script>
+        document.getElementById("findButton").addEventListener("click", function() {
+            const inputString = document.getElementById("inputString").value;
+            const resultDiv = document.getElementById("result");
+
+            if (inputString.trim() === "") {
+                resultDiv.innerText = "Please enter a valid string.";
+                return;
+            }
+
+            const mostFrequentChar = findMostFrequentCharacter(inputString);
+            resultDiv.innerText = `Most Frequent Character: '${mostFrequentChar.char}' (Count: ${mostFrequentChar.count})`;
+        });
+
+        function findMostFrequentCharacter(str) {
+            const charCount = {};
+            let maxCount = 0;
+            let mostFrequentChar = '';
+
+            for (const char of str) {
+                charCount[char] = (charCount[char] || 0) + 1;
+
+                if (charCount[char] > maxCount) {
+                    maxCount = charCount[char];
+                    mostFrequentChar = char;
+                }
+            }
+
+            return { char: mostFrequentChar, count: maxCount };
+        }
+    </script>
+</body>
+</html>

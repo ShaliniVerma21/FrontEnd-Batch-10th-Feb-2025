@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-2 Calculator</title>
+</head>
+<body>
+    <div class="container">
+    <h1>Basic Calculator</h1>
+    <form id="calculatorForm">
+    <label for="entered">Enter number:</label>
+    <input type="number" id="entered" name="entered"><br><br>
+    <label for="num1">Number 1:</label>
+    <input type="number" id="num1" name="num1"><br><br>
+    <label for="num2">Number 2:</label>
+    <input type="number" id="num2" name="num2"><br><br>
+    <button type="button" class="calculate-btn" onclick="calculate('add')">Add</button>
+    <button type="button" class="calculate-btn" onclick="calculate('subtract')">Subtract</button>
+    <button type="button" class="calculate-btn" onclick="calculate('multiply')">Multiply</button>
+    <button type="button" class="calculate-btn" onclick="calculate('divide')">Divide</button>
+    <br><br>
+<button type="button" class="calculate-btn" onclick="compare()">Compare</button>
+<br><br>
+<button type="button" class="match-btn" id="matchBtn">Match</button>
+<button type="button" class="not-match-btn" id="notMatchBtn">Not Match</button>
+</form>
+<p id="result" class="result"></p>
+</div>
+<script>
+function calculate(operation) {
+var num1 = parseFloat(document.getElementById('num1').value);
+var num2 = parseFloat(document.getElementById('num2').value);
+var result = document.getElementById('result');
+var output;
+if (isNaN(num1) || isNaN(num2)) {
+output = 'Please enter valid numbers';
+} else {
+switch (operation) {
+case 'add':
+output = 'Result: ' + (num1 + num2);
+break;
+case 'subtract':
+output = 'Result: ' + (num1 - num2);
+break;
+case 'multiply':
+output = 'Result: ' + (num1 * num2);
+break;
+case 'divide':
+if (num2 === 0) {
+output = 'Cannot divide by zero';
+} else {
+output = 'Result: ' + (num1 / num2);
+}
+break;
+}
+}
+result.textContent = output;
+}
+function compare() {
+var entered = parseFloat(document.getElementById('entered').value);
+var resultText = document.getElementById('result').textContent;
+var result = document.getElementById('result');
+var matchBtn = document.getElementById('matchBtn');
+var notMatchBtn = document.getElementById('notMatchBtn');
+var output;
+var resultValue = parseFloat(resultText.replace('Result: ', ''));
+if (entered === resultValue) {
+output = 'Both numbers are equal';
+matchBtn.style.backgroundColor = '#00ec10';
+notMatchBtn.style.backgroundColor = '#ccc';
+} else {
+output = 'The numbers are not equal';
+matchBtn.style.backgroundColor = '#ccc';
+notMatchBtn.style.backgroundColor = '#ff0000';
+}
+result.textContent = output;
+}
+</script>
+</body>
+</html>

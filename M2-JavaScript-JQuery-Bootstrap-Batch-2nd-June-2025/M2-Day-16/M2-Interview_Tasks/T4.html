@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-4 Todo List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 20px;
+        }
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: 80%;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        button {
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>ToDo List</h1>
+
+    <label for="taskInput">Enter Your Task:</label>
+    <input type="text" id="taskInput" name="taskInput"> <br><br>
+
+    <label for="dateInput">Enter Your Task Date:</label>
+    <input type="date" id="dateInput" name="dateInput"> <br><br>
+
+    <button id="add">ADD</button>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Task</th>
+                <th>Date</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="taskList"></tbody>
+    </table>
+
+    <script>
+        document.getElementById("add").addEventListener("click", function() {
+            let taskInput = document.getElementById("taskInput").value;
+            let dateInput = document.getElementById("dateInput").value;
+            
+            if (taskInput === "" || dateInput === "") {
+                alert("Please enter both task and date.");
+                return;
+            }
+
+            // Create a new row
+            let row = document.createElement("tr");
+            row.innerHTML = `
+                <td>${taskInput}</td>
+                <td>${dateInput}</td>
+                <td><button onclick="removeTask(this)">Remove</button></td>
+            `;
+            document.getElementById("taskList").appendChild(row);
+
+            // Clear the input fields
+            document.getElementById("taskInput").value = "";
+            document.getElementById("dateInput").value = "";
+        });
+
+        function removeTask(button) {
+            // Remove the row containing the button
+            button.parentElement.parentElement.remove();
+        }
+    </script>
+</body>
+</html>

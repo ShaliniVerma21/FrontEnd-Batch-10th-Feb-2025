@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-3 Background Color Changer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 50px;
+            transition: background-color 0.5s;
+        }
+
+        .container {
+            margin: auto;
+        }
+
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.5s, color 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Background Color Changer</h1>
+        <button id="redButton">Red</button>
+        <button id="greenButton">Green</button>
+        <button id="yellowButton">Yellow</button>
+        <button id="resetButton">Reset</button>
+    </div>
+</body>
+<script>
+// Get references to the buttons
+const redButton = document.getElementById('redButton');
+const greenButton = document.getElementById('greenButton');
+const yellowButton = document.getElementById('yellowButton');
+const resetButton = document.getElementById('resetButton');
+
+// Function to change background color and clicked button color
+function changeColors(backgroundColor, button) {
+    document.body.style.backgroundColor = backgroundColor;
+
+    // Reset all buttons to their original color
+    redButton.style.backgroundColor = '';
+    greenButton.style.backgroundColor = '';
+    yellowButton.style.backgroundColor = '';
+    resetButton.style.backgroundColor = '';
+
+    // Change the clicked button's color
+    button.style.backgroundColor = 'gray'; // Change to a different color for the clicked button
+}
+
+// Event listeners for the buttons
+redButton.addEventListener('click', () => changeColors('red', redButton));
+greenButton.addEventListener('click', () => changeColors('green', greenButton));
+yellowButton.addEventListener('click', () => changeColors('yellow', yellowButton));
+resetButton.addEventListener('click', () => {
+    changeColors('white', resetButton);
+    // Reset button color to its original state
+    resetButton.style.backgroundColor = 'lightgray';
+});
+</script>
+
+</html>

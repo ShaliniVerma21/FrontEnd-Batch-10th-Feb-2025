@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-6 Validating User Inputs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        form {
+            display: inline-block;
+            margin: 0 auto;
+        }
+        input {
+            margin: 10px 0;
+            padding: 10px;
+            width: 200px;
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+        .success {
+            color: green;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>User Input Validation</h1>
+    <form id="userForm">
+        <input type="text" id="username" placeholder="Username" required>
+        <div id="usernameError" class="error"></div>
+
+        <input type="email" id="email" placeholder="Email" required>
+        <div id="emailError" class="error"></div>
+
+        <input type="password" id="password" placeholder="Password" required>
+        <div id="passwordError" class="error"></div>
+
+        <button type="submit">Submit</button>
+    </form>
+    <div id="formMessage" class="success"></div>
+
+    <script>
+        document.getElementById("userForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Clear previous error messages
+            document.getElementById("usernameError").innerText = "";
+            document.getElementById("emailError").innerText = "";
+            document.getElementById("passwordError").innerText = "";
+            document.getElementById("formMessage").innerText = "";
+
+            // Get input values
+            const username = document.getElementById("username").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const password = document.getElementById("password").value.trim();
+
+            let isValid = true;
+
+            // Validate username
+            if (username.length < 3) {
+                document.getElementById("usernameError").innerText = "Username must be at least 3 characters long.";
+                isValid = false;
+            }
+
+            // Validate email
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                document.getElementById("emailError").innerText = "Please enter a valid email address.";
+                isValid = false;
+            }
+
+            // Validate password
+            if (password.length < 6) {
+                document.getElementById("passwordError").innerText = "Password must be at least 6 characters long.";
+                isValid = false;
+            }
+
+            // If all validations pass
+            if (isValid) {
+                document.getElementById("formMessage").innerText = "Form submitted successfully!";
+                // Here you can add code to actually submit the form data to a server if needed
+            }
+        });
+    </script>
+</body>
+</html>

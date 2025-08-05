@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-9 Finding Duplicates in an Array</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input {
+            padding: 10px;
+            width: 300px;
+            margin: 10px 0;
+        }
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Find Duplicates in an Array</h1>
+    <input type="text" id="inputArray" placeholder="Enter numbers separated by commas" required>
+    <button id="findButton">Find Duplicates</button>
+    <div class="result" id="result"></div>
+
+    <script>
+        document.getElementById("findButton").addEventListener("click", function() {
+            const inputArray = document.getElementById("inputArray").value;
+            const resultDiv = document.getElementById("result");
+
+            if (inputArray.trim() === "") {
+                resultDiv.innerText = "Please enter a valid array.";
+                return;
+            }
+
+            const numbers = inputArray.split(',').map(num => num.trim());
+            const duplicates = findDuplicates(numbers);
+
+            if (duplicates.length > 0) {
+                resultDiv.innerText = `Duplicates: ${duplicates.join(', ')}`;
+            } else {
+                resultDiv.innerText = "No duplicates found.";
+            }
+        });
+
+        function findDuplicates(arr) {
+            const seen = new Set();
+            const duplicates = new Set();
+
+            for (const item of arr) {
+                if (seen.has(item)) {
+                    duplicates.add(item);
+                } else {
+                    seen.add(item);
+                }
+            }
+
+            return Array.from(duplicates);
+        }
+    </script>
+</body>
+</html>
