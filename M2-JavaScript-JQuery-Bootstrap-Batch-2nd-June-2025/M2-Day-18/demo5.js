@@ -1,5 +1,5 @@
 //Polymorphism
-//1. Method overriding
+//1. Method overloading
 class MathsOperation {
     add(a, b, c) {
         if (c != undefined) {
@@ -27,4 +27,5 @@ let maths = new MathsOperation();
 console.log(maths.add(10, 20, 30)); //40
 console.log(maths.add(10, 20)); //30
 console.log(maths.multiply(10, 20, 30)); //6000
+
 console.log(maths.multiply(10, 20)); //200
